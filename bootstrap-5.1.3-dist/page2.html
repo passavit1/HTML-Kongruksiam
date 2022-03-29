@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page 2</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+    </style>
 </head>
+
 <body>
     <center>
-        <h1>Page 2</h1>
+        <h1>Page 2 การสร้างตาราง</h1>
+        <hr>
+        <h1>รายการสินค้า</h1>
+        <table border="1" width="80%" cellspacing="5">
+            <!--กำหนดความกว้างของตารางตามขนาดหน้าจอ , cellspacing ความหนาของขอบ-->
+            <thead bgcolor="pink">
+                <th>ภาพสินค้า</th>
+                <th>ชื่อสินค้า</th>
+                <th>ราคา</th>
+                <th>ดำเนินการ</th>
+            </thead>
 
+            <tbody align="center"> <!-- alight ถ้าต้องการให้ทั้งตารางเอามาใส่ที่ tbody ได้-->
+                <tr bgcolor="purple">
+                    <td><img src="https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg" alt=""
+                            width="160px" height="120px"></td>
+                    <td>ลูกแก้ว</td>
+                    <td>150 thb</td>
+                    <td rowspan="2"><a href="index.html"><button>สั่งซื้อ</button></td></a> <!-- rowspan รวมแถวเข้าด้วยกัน-->
+                </tr>
+                <tr>
+                    <td><img src="https://www.pic.com/wp-content/uploads/sites/3/2021/11/Home-Page_337.png?w=500&resize=500%2C300"
+                            alt="" width="160px" height="120px"></td>
+                    <td>หมู</td>
+                    <td bgcolor="yellow">300 thb</td>
+                </tr>
+            </tbody>
+            <tfoot bgcolor="gray">
+                <tr>
+                    <td colspan="2">จำนวนรวม</td>
+                    <td colspan="2">ราคารวม</td> <!-- colspanเป็นการรวมช่วงชื่อสินค้าและราคาเข้าด้วยกัน-->
+                </tr>
+
+            </tfoot>
+        </table>
+
+
+
+
+
+        <a href="index.html">home page</a>
     </center>
 </body>
+
 </html>
