@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 5 HTML FORM</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center">HTML FORM</h1>
+    <p>สร้างแบบฟอร์มให้ผู้ใช้สามารถป้อนข้อมูลได้ เพื่อนำข้อมูลไปประมวลผลอีกที</p>
+    <p>Tag ต่างๆได้แก่</p>
+    <table border="1px" align="center" width="80%">
+        <thead bgcolor="gray">
+            <th>Tag</th>
+            <th>Expain</th>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td>input</td>
+                <td>ช่องรับข้อความ</td>
+            </tr>
+            <tr>
+                <td>select</td>
+                <td>ตัวเลือกรูปแบบ drop down</td>
+            </tr>
+            <tr>
+                <td>option</td>
+                <td>สร้างตัวเลือก</td>
+            </tr>
+            <tr>
+                <td>button</td>
+                <td>สร้างปุ่ม</td>
+            </tr>
+            <tr>
+                <td>label</td>
+                <td>กำหนดป้ายชื่อช่องรับข้อมูล</td>
+            </tr>
+            <tr>
+                <td>textarea</td>
+                <td>สร้างช่องรับข้อความหลายบรรทัด</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <hr>
+    <h1 align="center">ตัวอย่าง</h1>
+    <form align="left">
+        <!-- INPUT -->
+        <h1 align="center">INPUT</h1>
+        <div>
+            <label for="fname">First name</label>
+            <input type="text" name="fname" placeholder="input your name ">
+        </div>
+        <div>
+            <label for="lname">last name</label>
+            <input type="text" name="lname" placeholder="input your last name ">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="input your email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label for="address">address</label>
+            <textarea name="textarea" id="" cols="30" rows="2"></textarea>
+        </div>
+        <div>
+            <label for="number">Age</label>
+            <input type="number" name="age" min="0" value="1">
+        </div>
+        <div>
+            <label for="number">Birth date</label>
+            <input type="date" name="date">
+        </div>
+        <div>
+            <label for="tel">TEL</label>
+            <input type="tel" name="tel">
+        </div>
+        <div>
+            <label for="color">Color</label>
+            <input type="color" name="color">
+        </div>
+        <div>
+            <label for="range">Range</label>
+            <input type="range" name="range" min="0" max="10" value="5">
+        </div>
+        <!-- value สามากำหนดค่าเริ่มต้นได้เลย-->
+        <hr>
+
+        <!-- Select -->
+        <h1 align="center">Select</h1>
+        <div>
+            <label for="EDU">EDU</label>
+            <select name="edu" id="">
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+            </select>
+        </div>
+
+
+    </form>
+
+
+
+    <hr>
+    <a href="index.html">home page</a>
+
+</body>
+
+</html>
