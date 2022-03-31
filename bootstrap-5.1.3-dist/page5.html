@@ -58,7 +58,8 @@
         <h1 align="center">INPUT</h1>
         <div>
             <label for="fname">First name</label>
-            <input type="text" name="fname" placeholder="input your name ">
+            <input type="text" name="fname" placeholder="input your name " required>
+            <!-- required จำเป็นต้องกรอกช่องนี้-->
         </div>
         <div>
             <label for="lname">last name</label>
@@ -78,7 +79,8 @@
         </div>
         <div>
             <label for="number">Age</label>
-            <input type="number" name="age" min="0" value="1">
+            <input type="number" name="age" min="0" value="1" readonly>
+            <!-- readonly ไม่สามารถแก้ไขข้อมูลได้อ่านได้อย่างเดียว-->
         </div>
         <div>
             <label for="number">Birth date</label>
@@ -106,10 +108,42 @@
             <select name="edu" id="">
                 <option value="A">A</option>
                 <option value="B">B</option>
-                <option value="C">C</option>
+                <option value="C" selected>C</option>
+                <!--selected ตั้งเป็นตัวเลือกเริ่มต้น-->
             </select>
         </div>
 
+        <div>
+            <label for="sex">Sex</label>
+            <input type="radio" name="sex">man
+            <input type="radio" name="sex">woman
+        </div>
+        <!--name มีหน้าที่ในการจัดกลุ่มตัวเลือก-->
+
+        <div>
+            <label for="favorite">favorite</label>
+            <input type="checkbox" name="favorite">gaming
+            <input type="checkbox" name="favorite">coding
+            <input type="checkbox" name="favorite">sleeping
+        </div>
+
+        <div>
+            <label for="file">Your file</label>
+            <input type="file">
+        </div>
+
+        <div>
+            <label for="website">Your website</label>
+            <input type="url">
+        </div>
+
+        <div>
+            <input type="submit" value="submit">
+            <button type="submit">submit type button</button>
+            <!--เลือกใช้อันไหนก้ได้-->
+            <button type="reset">ล้างข้อมูล</button>
+            <input type="reset" value="reset type input">
+        </div>
 
     </form>
 
