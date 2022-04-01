@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 1 การประกาศ selector </title>
+    <style>
+        /* comment in head */
+        body {
+            background-color: beige;
+        }
+
+        h1 {
+            color: red;
+            text-align: center;
+        }
+
+        .aa {
+            color: aqua;
+            font-size: 30px;
+        }
+
+        #aa {
+            color: blue;
+            font-size: 15px;
+        }
+
+        .units {
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!--รูปแบบการประกาศใช้-->
+    <a href="index.html">Home page</a>
+    <h1>Sec 1 การประกาศ selector </h1>
+    <p><u><b> ตัวอย่าง</b></u></p>
+    <div class="aa">class aa</div>
+    <div id="aa">ID aa</div>
+    <hr color="black">
+    <article>รูปแบบการประกาศใช้</article><br>
+    <section>แบบ Internal</section>
+    <ul>
+        <li>inline เป็นการแทรก Attribute style ลงใน Tag HTML</li>
+        <li>Embeded การกำหนดรูปแบบ Style sheet ภายในไฟล์เดียวกันกับไฟล์เว็บประกาศไว้ที่ Head </li>
+    </ul>
+    <section>แบบ External</section>
+    <div>กำหนดไฟล์ Style sheets โดยมีนามสกุล .css แล้วค่อยเชื่อมเข้ามาใช้ภายในเว็บเพจ</div><br>
+    <hr color="black">
+
+    <!--Internal/embeded-->
+    <article>Internal / Embeded</article><br>
+    <div>กำหนด Style ไว้ที่ Head ของเว็บเพจ เพื่อกำหนด Style ให้กับ element ในเว็บเพจนั้น</div><br>
+    <hr color="black">
+
+    <!--External-->
+    <article>External</article>
+    <div>กำหนด style sheet แยดเป็นอีกไฟล์ใช้นามสกุล .css แล้วเชื่อมโดยใช้ Tag < Link> เขียนในส่วนของ head
+            แล้วกำหนดไฟล์ใน href</div><br>
+    <hr color="black">
+
+    <!--units in CSS absulute-->
+    <article>Units in CSS แบบตายตัว (absolute)</article><br>
+    <table border="1px" width="80%">
+        <thead>
+            <th>Units</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="units">px</td>
+                <td>Pixel โดย 1PX = 0.75pt</td>
+            </tr>
+            <tr>
+                <td class="units">pt</td>
+                <td>Point โดย 1pt = 1/72 inchs</td>
+            </tr>
+            <tr>
+                <td class="units">cm</td>
+                <td>เซนติเมตร</td>
+            </tr>
+            <tr>
+                <td class="units">mm</td>
+                <td>มิลลิเมตร</td>
+            </tr>
+            <tr>
+                <td class="units">in</td>
+                <td>Inches (1in = 96px = 2.54cm)</td>
+            </tr>
+            <tr>
+                <td class="units">pc</td>
+                <td>picas (1PC = 12pt)</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <hr color="black">
+
+    <!--Units in css Relative-->
+    <article>Units in css แบบอัตราส่วน (Relative)</article><br>
+    <table border="1px" width="80%">
+        <thead>
+            <th>units</th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="units">%</td>
+                <td>กำหนด % มักใช้กับความกว้างและความสูง</td>
+            </tr>
+            <tr>
+                <td class="units">em</td>
+                <td>element parent เป็นการกำหนดจำนวนเท่าขอขนาดปัจจุบัน</td>
+            </tr>
+            <tr>
+                <td class="units">rem</td>
+                <td>กำหนดขนาดอ้างอิงกับ root element ปกติค่า = 16 px</td>
+            </tr>
+            <tr>
+                <td class="units">vw</td>
+                <td>1% หรือ 1/100 ของ viewpoint width <br> - width ของ browser viewpoint เท่ากับ 750px ค่า 1vm = 7.5px </td>
+            </tr>
+            <tr>
+                <td class="units">vh</td>
+                <td>1% หรือ 1/100 ของ viewpoint height <br> - width ของ browser viewpoint เท่ากับ 900px ค่า 1vm = 9px</td>
+            </tr>
+            <tr>
+                <td class="units">vmin , vmax</td>
+                <td>กำหนดค่าต่ำสุดและสูงสุดของ viewppoint</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

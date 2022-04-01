@@ -11,12 +11,55 @@
             background-color: beige;
         }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <a href="index.html">home page</a>
+
+    <h1 align="center" style="color: red;">Page 2 การสร้างตาราง</h1>
+    <hr color="black">
+
+    <article>Tag ที่ใช้ในการสร้างตาราง</article><br>
+    <table border="1px" width="80%">
+        <thead>
+            <th> TAG </th>
+            <th>Description</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="cen">
+                    < Table>
+                </td>
+                <td>Tag ครอบคลุมการสร้างตารางทั้งหมด</td>
+            </tr>
+            <tr>
+                <td class="cen">
+                    < thead>
+                </td>
+                <td>กำหนดส่วนหัวของตาราง</td>
+            </tr>
+            <tr>
+                <td class="cen">< tbody ></td>
+                <td>กำหนดส่วนแถวและส่วนเนื้อหาของตาราง</td>
+            </tr>
+            <tr>
+                <td class="cen">< tfoot ></td>
+                <td>กำหนดส่วนท้ายของตาราง</td>
+            </tr>
+            <tr>
+                <td class="cen">< tr ></td>
+                <td>แถวของตาราง</td>
+            </tr>
+            <tr>
+                <td class="cen">< td ></td>
+                <td>กำหนดเนื้อหาของตาราง</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr color="black">
+    <div align="left">ตัวอย่างตาราง</div>
     <center>
-        <h1>Page 2 การสร้างตาราง</h1>
-        <hr>
         <h1>รายการสินค้า</h1>
         <table border="1" width="80%" cellspacing="5">
             <!--กำหนดความกว้างของตารางตามขนาดหน้าจอ , cellspacing ความหนาของขอบ-->
@@ -27,13 +70,15 @@
                 <th>ดำเนินการ</th>
             </thead>
 
-            <tbody align="center"> <!-- alight ถ้าต้องการให้ทั้งตารางเอามาใส่ที่ tbody ได้-->
+            <tbody align="center">
+                <!-- alight ถ้าต้องการให้ทั้งตารางเอามาใส่ที่ tbody ได้-->
                 <tr bgcolor="purple">
                     <td><img src="https://ichef.bbci.co.uk/news/999/cpsprodpb/15951/production/_117310488_16.jpg" alt=""
                             width="160px" height="120px"></td>
                     <td>ลูกแก้ว</td>
                     <td>150 thb</td>
-                    <td rowspan="2"><a href="index.html"><button>สั่งซื้อ</button></td></a> <!-- rowspan รวมแถวเข้าด้วยกัน-->
+                    <td rowspan="2"><a href="index.html"><button>สั่งซื้อ</button></td></a>
+                    <!-- rowspan รวมแถวเข้าด้วยกัน-->
                 </tr>
                 <tr>
                     <td><img src="https://www.pic.com/wp-content/uploads/sites/3/2021/11/Home-Page_337.png?w=500&resize=500%2C300"
@@ -52,10 +97,6 @@
         </table>
 
 
-
-
-
-        <a href="index.html">home page</a>
     </center>
 </body>
 
