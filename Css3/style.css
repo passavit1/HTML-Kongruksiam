@@ -2,23 +2,29 @@ body {
     background-color: beige;
 }
 
-article{
-    font-size:30px;
-    color:deeppink;
+article {
+    font-size: 30px;
+    color: deeppink;
     font-family: 'Chakra Petch', sans-serif;
-}
-section{
-    font-size: 25px;
-    color:violet;
+    
 }
 
-h1{
+section {
+    font-size: 25px;
+    color: violet;
+}
+
+h1 {
     color: red;
     text-align: center;
 }
 
-hr{
-    border-color:black;
+hr {
+    border-color: black;
     border-width: 1px;
-    
+
+}
+
+span {
+    color: rgb(216, 139, 61);
 }

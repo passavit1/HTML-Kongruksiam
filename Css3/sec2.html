@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sec 2 การกำหนดชนิดฟอนต์ </title>
-
     <link rel="stylesheet" href="style.css">
     <!-- เอา font จาก google มาใช้ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,7 +41,81 @@
         <li>แบบค่าคงที่ small , medium , large</li>
         <li>แบบตัวเลข 10px , 20px</li>
     </ol>
-    <div>โดยใช้ Tag <b>< font-site ></b> </div>
+    <div>โดยใช้ Tag <b>
+            < font-site>
+        </b> </div>
+    <hr>
+
+    <article>การกำหนดความหนาข้อความ</article><br>
+    <div><span>Tag < Font - weight></span> กำหนดได้ 2 รูปแบบ</div>
+    <ol>
+        <li><span>แบบค่าคงที่ :</span> lighter , bold , bolder</li>
+        <li><span>แบบตัวเลข :</span> 100 , 200 , 300 , ... </li>
+    </ol>
+    <div><span>Tag font-style</span> กำหนดตัวเอียง โดยค่าที่ได้คือ italic , oblique (45 องศา)</div>
+    <hr>
+    <article>การกำหนดสี</article><br>
+    <div>กำหนดได้ 4 รูปแบบ</div>
+    <ol>
+        <li><span>ชื่อสี : </span> green , red , yellow</li>
+        <li><span>RGB : </span> rgb(red,green,blue)</li>
+        <li><span>Hexadecimal : </span> #000 #fff</li>
+        <li><span>HSL :</span> (hue , saturation , lightness)</li>
+    </ol>
+    <a href="https://www.google.com/search?q=color+picker&sxsrf=APq-WBs1TnkzhUjHT0nSRUa6GahPZk98yg%3A1648906855467&source=hp&ei=Z1JIYv7OGpGHr7wPhrCh8Aw&iflsig=AHkkrS4AAAAAYkhgdzeum26bcqYBhgdm9obWG8m1yLxB&ved=0ahUKEwi-novbwPX2AhWRw4sBHQZYCM4Q4dUDCAc&uact=5&oq=color+picker&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEOgQIIxAnOg4ILhCABBCxAxDHARDRAzoFCC4QgAQ6CAgAEIAEELEDOgsILhCABBDHARCvAToICC4QgAQQsQM6CwgAEIAEELEDEIMBOg4ILhCABBCxAxDHARCjAjoICAAQsQMQgwE6CAguELEDEIMBOgsILhCABBCxAxDUAjoICC4QgAQQ1AI6BwgAEIAEEAo6BwgAELEDEAo6CgguELEDENQCEAo6BAgAEAo6BwguELEDEAo6BAgAEA06CgguELEDENQCEA06BwgAELEDEA06BwguENQCEA1QAFjzJ2DbKGgEcAB4AIABfIgBgQySAQQxMC42mAEAoAEB&sclient=gws-wiz"
+        target="_black">ลิงก์เลือกสีผ่านทาง Google</a>
+    <hr>
+    <article>กำหนดลักษณะข้อความ (text-decoration)</article><br>
+    <div><span>Tag Text-decoration</span> กำหนดได้ 4 รูปแบบ</div>
+    <ol>
+        <li><span>none : </span>ค่าว่าง</li>
+        <li><span>underline : </span>ขีดเส้นใต้ Ex. <span style="text-decoration: underline;">underline</span></li>
+        <li><span>overline : </span>ขีดเส้นเหนือข้อความ Ex. <span style="text-decoration: overline;">overline</span>
+        </li>
+        <li><span>line-through : </span>ขีดเส้นทับข้อความ Ex. <span
+                style="text-decoration: line-through;">line-through</span></li>
+    </ol>
+    <hr>
+    <article>การจัดแนวข้อความ</article><br>
+    <div><span>Tag Text-align</span> กำหนดได้ 4 รูปแบบ</div>
+    <ul>
+        <li>left , right , center</li>
+        <li>justify (กระขายข้อความให้ทุกบรรทัดเท่ากัน)</li>
+    </ul>
+    <hr>
+    <article>กำหนดความกว้างและความสูง</article><br>
+    <div><span>width</span> ใช้กำหนดความกว้าง</div>
+    <ul>
+        <li><span>auto</span> คือ broweser กำหนดเอง</li>
+        <li><span>length</span> คือ ความกว้างแบบหน่วยวัด PX CM เป็นต้น</li>
+        <li><span>%</span> คือ ความกว้างแบบ %</li>
+    </ul>
+    <div><span>height</span> ใช้กำหนดความสูงของวัตถุที่ต้องการ</div>
+    <ul>
+        <li><span>auto</span> คือ broweser กำหนดเอง</li>
+        <li><span>length</span> คือ ความสูงแบบหน่วยวัด PX CM เป็นต้น</li>
+        <li><span>%</span> คือ ความสูงแบบ %</li>
+    </ul>
+    <hr>
+    <article>ความกว้างความสูงแบบ Max min</article>
+    <ul>
+        <li><span>width-min</span> ใช้กำหนดความกว้างต่ำสุด</li>
+        <li><span>width-max</span> ใช้กำหนดความกว้างสูงสุด</li>
+        <li><span>height-min</span> ใช้กำหนดความสูงต่ำสุด</li>
+        <li><span>height-max</span> ใช้กำหนดความสูงสูงสุด</li>
+    </ul>
+    <section>หน่วยที่รองรับ</section>
+    <ul>
+        <li>none ไม่กำหนดค่า</li>
+        <li>length กำหนดแบบหน่วยวัด</li>
+        <li>% กำหนดเป็นน %</li>
+    </ul>
+    
+
+
+
+
+
 </body>
 
 </html>
