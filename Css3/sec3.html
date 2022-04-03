@@ -5,17 +5,185 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sec 1 </title>
+    <title>Sec 3 พื้นที่ต่างๆ </title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            background-color: red;
+        .border {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            border: dotted 4px red;
+            border-radius: 8px;
+        }
+
+        .borderstyle {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            border-top-style: groove;
+            border-left-style: dashed;
+            border-right-style: dotted;
+            border-right-color: red;
+            border-width: 5px;
+        }
+
+        .borderra {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 10px 30px 70px 120px;
+        }
+
+        .borderra2 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 10px 60px;
+        }
+
+        .margin {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            border: dotted 4px red;
+            border-radius: 8px;
+            margin-top: 20px;
+            margin-left: 30px;
+            padding-left: 50px;
+            padding-top: 20px;
+        }
+
+        .img {
+            width: 500px;
+            height: 200px;
+            background-image: url(data:image/jpeg;base64,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);
+            background-repeat: no-repeat;
+
+        }
+        body{
+            background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.2.1819120589.1644364800);
+            background-attachment:fixed;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position:top;
+            
         }
     </style>
 
 </head>
 
 <body>
-<a href="index.html">Home page</a>
+    <a href="index.html">Home page</a>
+    <h1>พื้นที่แบบต่างๆ</h1>
+    <article>กำหนดความกว้างและความสูง</article><br>
+    <div><span>width</span> ใช้กำหนดความกว้าง</div>
+    <ul>
+        <li><span>auto</span> คือ broweser กำหนดเอง</li>
+        <li><span>length</span> คือ ความกว้างแบบหน่วยวัด PX CM เป็นต้น</li>
+        <li><span>%</span> คือ ความกว้างแบบ %</li>
+    </ul>
+    <div><span>height</span> ใช้กำหนดความสูงของวัตถุที่ต้องการ</div>
+    <ul>
+        <li><span>auto</span> คือ broweser กำหนดเอง</li>
+        <li><span>length</span> คือ ความสูงแบบหน่วยวัด PX CM เป็นต้น</li>
+        <li><span>%</span> คือ ความสูงแบบ %</li>
+    </ul>
+    <hr>
+    <article>ความกว้างความสูงแบบ Max min</article>
+    <ul>
+        <li><span>width-min</span> ใช้กำหนดความกว้างต่ำสุด</li>
+        <li><span>width-max</span> ใช้กำหนดความกว้างสูงสุด</li>
+        <li><span>height-min</span> ใช้กำหนดความสูงต่ำสุด</li>
+        <li><span>height-max</span> ใช้กำหนดความสูงสูงสุด</li>
+    </ul>
+    <section>หน่วยที่รองรับ</section>
+    <ul>
+        <li>none ไม่กำหนดค่า</li>
+        <li>length กำหนดแบบหน่วยวัด</li>
+        <li>% กำหนดเป็นน %</li>
+    </ul>
+    <hr>
+    <article>การกำหนดเส้นขอบ</article><br>
+    <div><span>Border</span> คือการกำหนดเส้นขอบ โดยมีรูปแบบดังนี้</div><br>
+    <div> border : <รูปแบบเส้น>
+            <ขนาด>
+                <สี>
+    </div><br>
+    <div><span>รูปแบบเส้น</span> ประกอบด้วย solid dotted dashed</div>
+    <div><span>ขนาด</span> ความกว้างของเส้น</div>
+    <div><span>สี</span> กำหนดรูปแบบของสี</div><br>
+    <section>ตัวอย่าง</section><br>
+    <div class="border"></div>
+    <div>มีการกำหนด border : dotted 4px red ;</div>
+    <div>สามารถเพิ่ม border-radius เพื่อให้มุมโค้งได้</div>
+    <hr>
+    <article>รูปแบบเส้นขอบ</article><br>
+    <div>โดยใช้ Tag border-style </div><br>
+    <div>border - xxx - width คือ ความหนาของเส้น</div>
+    <div>border - xxx - style : xxx คือ ทิศทางของรูปแบบของเส้น</div>
+    <div>border - xxx - color : xxx คือ ทิศทางของรูปแบบของเส้น</div><br>
+    <section>ตัวอย่าง</section><br>
+    <div class="borderstyle"></div><br>
+    <hr>
+    <article>การกำหนดความโค้งเส้นขอบ</article><br>
+    <div>สามารถเขียนแบบสั้นๆได้ ดังนี้</div>
+    <div>border-radius : บนซ้าย บนขวา ล่างขวา ล่างซ้าย</div><br>
+    <section>ตัวอย่าง</section><br>
+    <div>border-radius : 10px 30px 70px 120px</div><br>
+    <div class="borderra"></div><br>
+    <div>border-redius : 10px 60px กรณีมี 2 ค่าจะเป็นการกำหนดมุมฝั่งตรงข้าม</div><br>
+    <div class="borderra2"></div><br>
+    <hr>
+    <article>Box model & margon</article><br>
+    <div>จะประกอบด้วยองค์ประกอบดังนี้</div>
+    <ul>
+        <li><span>เนื้อหา</span> เนื้อหาต่างๆ เช่น รูปภาพ ปุ่ม</li>
+        <li><span>Padding</span> ระยะห่างของเนื้อหากับเส้นขอบ</li>
+        <li><span>เส้นขอบ</span> เส้นขอบ</li>
+        <li><span>margin</span> ระยะห่างระหว่างเส้นขอบกับวัตถุอื่นๆ</li>
+    </ul>
+    <div>เราสามารถกำหนดทิศทางได้เหมือน border</div><br>
+    <section>margin</section>
+    <div class="margin">A</div>
+    <div class="margin">B</div><br>
+    <div>margin-top : 20px , margin-left : 30px</div><br>
+    <section>เขียนสั้นๆได้ ดังนี้</section><br>
+    <div>margin : top right bottom left</div><br>
+    <section>Padding</section><br>
+    <hr>
+    <article>Background-image</article><br>
+    <div>Tag background-image : url(ใส่ลิงก์ image หรือ / หาที่อยู่ของรูปภาพภายในเครื่อง);</div><br>
+    <section>กรณีภาพซ้ำ</section><br>
+    <div>ใช้ background-repeat : xxx ; โดยจะแบ่งเป็น 4 หัวข้อย่อยดังนี้ </div>
+    <ul>
+        <li>repeat : (ค่า default : ทำให้ภาพเต็มพื้นที่ของ Element</li>
+        <li>repeat-x : จัดเรียงเฉพาะแนวแกน x</li>
+        <li>repeat-y : จัดเรียงเฉพาะแนวแกน y</li>
+        <li>no-repeat : แสดงภาพพื้นหลังภาพเดียว</li>
+    </ul>
+    <div>ตัวอย่าง</div><br>
+    <div class="img"></div><br>
+    <div>background-repeat : no-repeat</div><br>
+    <hr>
+    <article>คุณสมบัติพื้นหลัง</article><br>
+    <div>ถ้าต้องการตรึงภาพพื้นหลังใช้ Tag background-attachment</div>
+    <ul>
+        <li><span>scroll</span> : เลื่อนพื้นหลังตาม scrollbar</li>
+        <li><span>fixed</span> : ตรึงพื้นหลังไว้กับที่ เวลาเลื่อนขึ้นลงรูปก็จะตรึงอยู่ตรงนั้น</li>
+    </ul>
+    <section>ตำแหน่งของพื้นหลัง</section><br>
+    <div>กำหนดตำแหน่งของ back ground โดยใช้ Tag background-position </div>
+    <section>กำหนดขนาดภาพ</section><br>
+    <div><span>Tag background-size</span> : กำหนดค่า</div>
+    <ul>
+        <li><span>auto : </span>ค่าปกติตามเดิม</li>
+        <li><span>PX หรือ %</span></li>
+        <li><span>Cover : </span>ขยายภาพให้เต็มจอในอัตราส่วนเท่ากัน</li>
+        <li><span>contain : </span>ขยายชนขอบ browser</li>
+    </ul>
+
+
+
 </body>
 
 </html>
