@@ -60,15 +60,28 @@
             background-repeat: no-repeat;
 
         }
-        body{
+
+        body {
             background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.2.1819120589.1644364800);
-            background-attachment:fixed;
+            background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: contain;
-            background-position:top;
+            background-position: top;
+
+        }
+
+        .link{
+            text-decoration: none;
             
         }
+        .link:link{
+            color:blueviolet
+        }
+        .link:hover{
+            color: skyblue;
+        }
     </style>
+
 
 </head>
 
@@ -181,7 +194,28 @@
         <li><span>Cover : </span>ขยายภาพให้เต็มจอในอัตราส่วนเท่ากัน</li>
         <li><span>contain : </span>ขยายชนขอบ browser</li>
     </ul>
-
+    <hr>
+    <article>กำหนดตำแหน่งด้วย Float</article><br>
+    <div><span>Float</span> กำหนดให้ Eliment ลอยอยู่ด้านใดด้านหนึ่ง</div>
+    <ul>
+        <li>Left , right</li>
+        <li>inherit ลอยตาม parent element</li>
+        <li>none ไม่ให้มีการลอย</li>
+        <li>clear ไม่อนุญาตให้มีการลอยของ Eliment</li>
+    </ul><hr>
+    <article>กำหนด style ให้กับ Link</article>
+    <ul>
+        <li>a : link กำหนด style ให้กับ link ที่ยังไม่ถูก Click</li>
+        <li>a : hover กำหนด style เมื่อนำเมาส์ไปวาง</li>
+        <li>a : visited กำหนด style ให้กับ link ที่ถูกคลิกแล้ว</li>
+        <li>a : active กำหนด style ให้กับ link ขณะถูกคลิก</li>
+    </ul>
+    <section>ตัวอย่าง</section><br>
+    <a href="index.html" class="link">Home page</a><br>
+    <a href="https://www.google.co.th" target="_blank" class="link">Google</a><br>
+    <a href="http://youtube.com" target="_blank" class="link">youtube</a><br>
+    <hr>
+    
 
 
 </body>

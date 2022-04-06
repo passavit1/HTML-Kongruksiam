@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 4 Display</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+            height: 3000px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border-style: dashed;
+            border-width: 5px;
+
+
+        }
+
+        #id-1 {
+            background-color: red;
+            position: relative;
+            left: 50px;
+            top: 50px;
+
+
+        }
+
+        #id-2 {
+            background-color: yellow;
+            position: absolute;
+            top: 50px;
+            right: 160px;
+        }
+
+        #id-3 {
+            background-color: rgb(202, 16, 202);
+            position: absolute;
+            top: 50px;
+            left: 160px;
+        }
+
+        #id-4 {
+            background-color: gray;
+
+        }
+
+        #id-5 {
+            background-color: rgb(34, 13, 221);
+            position: sticky;
+            top: 0;
+        }
+        .contrain{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background-color: antiquewhite;
+            border: dotted 5px red;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <a href="index.html" style="position: sticky;top: 0;" >Home page</a>
+    <h1>Display</h1>
+    <hr>
+    <article>Display คือการจัดรูปแบบการแสดงผล</article>
+    <ul>
+        <li><span>None : </span>ไม่มีการแสดงผล</li>
+        <li><span>Black : </span>แสดงผลแบบ block ขึ้นบรรทัดใหม่ก่อน (เรียงในแนวตั้ง)</li>
+        <li><span>Inline : </span>แสดงผลแบบ inline ไม่ขึ้นบรรทัดใหม่ (เรียงในแนวนอน)</li>
+        <li><span>inline-block : </span>แสดงผลแบบแนวนอนและขยายพื้นที่ด้านใน</li>
+    </ul>
+    <hr>
+    <article>Visibility</article><br>
+    <div>แสดงหรือซ่อนวัตถุในหน้าเว็บ Tag Visibility</div>
+    <ul>
+        <li><span>hidden</span> ซ่อนวัตถุ</li>
+        <li><span>visible</span> แสดงวัตถุ</li>
+    </ul>
+    <hr>
+    <article>การจัดตำแหน่งด้วย Position</article>
+    <div>position ใช้ในการจัดตำแหน่งของวัตถุ</div>
+    <ul>
+        <li><span>static : </span>วัดวางแบบปกติ</li>
+        <li><span>relative : </span>กำหนดตำแหน่งวัตถุโดยนับจากจุดที่วัตถุนั้นๆอยู่</li>
+        <li><span>absolute : </span>จัดวางวัตถุ ตำแหน่งใดก็ได้แต่ต้องกำหนดจากขอบของ Elememt ที่อยู่</li>
+        <li><span>fixed : </span>ใช้ในการจัดวัตถุให้อยู่ตำแหน่งเดิม</li>
+        <li><span>sticky : </span>ให้วัตถุติดขอบเมื่อเลื่อนไปถึง</li>
+    </ul>
+    <div>Tag z-index : จัดตำแหน่งหน้าหลัง</div><br>
+    <section>ตัวอย่าง</section><br>
+    <div class="box" id="id-1"></div>
+    <div class="contrain">
+        <div class="box" id="id-2"></div>
+        <div class="box" id="id-3"></div>
+    </div>
+    <div class="box" id="id-4"></div>
+    <div class="box" id="id-5"></div>
+
+
+</body>
+
+</html>
