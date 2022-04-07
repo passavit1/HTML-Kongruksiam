@@ -29,3 +29,12 @@ hr {
 span {
     color: rgb(216, 139, 61);
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+/* เวลาคลิก link ในหน้าเดียวกันจะค่อยๆเลื่อน */

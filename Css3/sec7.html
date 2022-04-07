@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sec 7 กำหนดเงาด้วย box - shadow</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        img {
+            box-shadow: 10px 10px 20px 3px red;
+        }
+
+        div {
+            width: 150px;
+            height: 150px;
+            border: 3px dotted red;
+            box-shadow: 5px 5px 30px 2px blue,
+                -5px -5px 30px 2px orange;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">Home page</a>
+    <h1>กำหนดเงาด้วย box - shadow</h1>
+    <hr>
+    <section>box - shadow : x y blur spread color</section>
+    <ul>
+        <li><span>X : </span>เงาแกน x (+ ขวา , - ซ้าย)</li>
+        <li><span>Y : </span>เงาแกน y (+ ล่าง , - บน)</li>
+        <li><span>Blur : </span>ขนาดความมัวของเงา</li>
+        <li><span>Spread : </span>ขนาดของเงา</li>
+        <li><span>Color : </span>สีของเงา</li>
+    </ul>
+    <section>Example</section><br>
+    <img src="/Css3/picture.jpeg" alt="picture" width="250px"><br>
+    <p>box-shadow: 10px 10px 20px 3px red;</p>
+    <div></div>
+    <p>box-shadow: 5px 5px 30px 2px blue,
+        -5px -5px 30px 2px orange;</p>
+    <p>เป็นการใส่เงา 2 ฝั่ง</p>
+</body>
+
+</html>
