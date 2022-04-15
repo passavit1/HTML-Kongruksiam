@@ -1,13 +1,13 @@
 body {
     background-color: beige;
-    
+
 }
 
 article {
     font-size: 30px;
     color: deeppink;
     font-family: 'Chakra Petch', sans-serif;
-    
+
 }
 
 section {
@@ -30,11 +30,20 @@ span {
     color: rgb(216, 139, 61);
 }
 
-html{
+html {
     scroll-behavior: smooth;
+    /* เวลาคลิก link ในหน้าเดียวกันจะค่อยๆเลื่อน */
 }
 
-a{
+a {
     text-decoration: none;
 }
-/* เวลาคลิก link ในหน้าเดียวกันจะค่อยๆเลื่อน */
+
+
+/* smart phone  */
+@media only screen and (max-width:500px) {
+    body {
+        background-color: red;
+    }
+}
+
