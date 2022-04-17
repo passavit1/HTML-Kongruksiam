@@ -31,7 +31,7 @@ span {
 }
 
 html {
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     /* เวลาคลิก link ในหน้าเดียวกันจะค่อยๆเลื่อน */
 }
 

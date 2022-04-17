@@ -4,10 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sec 6</title>
+    <title>Sec10 Flexbox</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .item{
+            background: orange;
+            border: 1px solid black;
+            width: 200px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+
+        }
+        .flex{
+            display: flex;
+            background-color: aqua;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            
+        }
+    </style>
+
 </head>
 <body>
     <a href="index.html">Home page</a>
+    <h1>Flexbox</h1><br>
+    <div>ช่วยจัดวางตำแหน่ง element ต่างๆในหน้าเว็บ โดยมีคุณสมบัติดังนี้</div>
+    <ul>
+        <li>จัดเรียงตำแหน่งของ Element ได้ง่ายขึ้น</li>
+        <li>กำหนดขนาดให้พอดีกับพื้นที่ว่างแบบอัตโนมัติ</li>
+    </ul>
+    <br><hr>
+    <article>องค์ประกอบของ Flexbox</article>
+    <ul>
+        <li>container = กรอบที่ครอบ Item</li>
+        <li>Item = สมาชิกของ container</li>
+    </ul>
+    <div>ค่าเริ่มต้น flex จะเป็นแนวนอน</div>
+    <hr>
+    <article>Example</article><br>
+    <div class="flex">
+        <div class="item item-1">
+            <h3>Item 1</h3>
+        </div>
+        <div class="item item-2">
+            <h3>Item 2</h3>
+        </div>
+        <div class="item item-3">
+            <h3>Item 3</h3>
+        </div>
+    </div>
+    <br><hr>
+    <article>กำหนดทิศทางด้วน Flex - direction</article>
+    <ul>
+        <li><span>Row = </span>แนวนอน ทิศเดียวกับแกนหลัก</li>
+        <li><span>Colume = </span>แนวตั้ง ทิศเดียวกับแกนหลัก</li>
+        <li><span>Row-reverse = </span>แนวนอน ทิศตรงข้ามกับแกนหลัก</li>
+        <li><span>Colume-reverse = </span>แนวนอน ทิศตรงข้ามกับแกนหลัก</li>
+    </ul>
+    <br><hr>
+    <article>กำหนดขนาดด้วย Flex-wrap</article>
+    <div>กรณีที่ขนาด Item ใหญ่กว่าพื้นที่ container</div>
+    <ul>
+        <li><span>nowrap = </span>จัดวาง Item ที่เกินพื้นที่ไปด้านขวามือ</li>
+        <li><span>wrap = </span>จัดวาง Item ที่เกินพื้นที่เรียงจาก บน ลง ล่าง</li>
+        <li><span>wrap-reverse = </span>จัดวาง Item ที่เกินพื้นที่เรียงจาก ล่าง ขึ้น บน</li>
+    </ul>
+    <br><hr>
+    <article>Flex - properties (items)</article>
+    <ul>
+        <li><span>flex - shrink = </span>ให้ item หดตัวเท่าใดเมื่อเทียบกับ item อื่น ค่าเริ่มต้น = 1 </li>
+        <li><span>flex - grow = </span>ให้ item ขยายตัวเท่าใดเมื่อเทียบกับ item อื่น ค่าเริ่มต้น = 0</li>
+        <li><span>flex - basis = </span>กำหนดค่าความยืดหยุ่นเบื้องต้น</li>
+        <li><span>flex:1 = </span>ทำให้ item ในแถวเดียวกันมีขนาดเท่ากัน</li>
+    </ul>
+
+
 </body>
 </html>
