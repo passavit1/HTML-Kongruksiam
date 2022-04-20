@@ -1,18 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sec 6</title>
+    <title>sec 11 CSS Grid layout</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .item {
+            padding: 3rem;
+            border: 3px dotted orange;
+            /* margin: 1rem; */
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: rgb(132, 243, 255);
+            margin: 3px;
+            border-radius: 10px;
+
+        }
+
+        .grid {
+            display: grid;
+            grid-template-rows: 150px 150px 150px;
+            /* grid-template-columns: 150px auto 150px ; */
+            grid-template-columns: repeat(3, 150px);
+        }
+
+        .item:first-child {
+            background-color: wheat;
+            /* grid-column-start: 1;
+            grid-column-end: 4; */
+            grid-column: 1/3;
+        }
+
+        .item:last-child {
+            background-color: lime;
+            grid-row: 3/5;
+            grid-column: 3/4;
+        }
+
+        /* span */
+
+        .item-sp {
+            padding: 2rem;
+            border: 3px dotted orange;
+            /* margin: 1rem; */
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+            background-color: rgb(132, 243, 255);
+            border-radius: 10px;
+
+        }
+
+        .grid-sp {
+            display: grid;
+            /* grid-template-rows: 150px 150px 150px; */
+            /* grid-template-columns: 150px auto 150px ; */
+
+            /* grid-template-rows: repeat(,auto);
+            grid-template-columns: repeat(4, 150px); */
+
+            /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+        }
+        .item-sp:first-child{
+            grid-row: 2/span 2;
+            grid-column: 1/span 1;
+        }
+
+        /* ตั้งชื่อ */
+
+        .grid-nm{
+            display: grid;
+            text-align: center;
+
+            /* grid-template-columns: 1fr 2fr; 
+            grid-template-rows: 1fr 5fr 1fr;
+            grid-template-areas:
+            'nm1 nm1' 
+            'nm2 nm4' 
+            'nm3 nm4' 
+            ; */
+            
+            grid-template:
+            'nm1 nm1' 3fr
+            'nm2 nm4' 5fr
+            'nm3 nm4' 1fr
+            / 1fr 4fr
+            
+            ;
+        }
+        .item-nm1{
+            background-color: darkslateblue;
+            grid-area: nm1;
+        }
+        .item-nm2{
+            background-color: darkgoldenrod;
+            grid-area: nm2;
+        }
+        .item-nm3{
+            background-color: darksalmon;
+            grid-area: nm3;
+        }
+        .item-nm4{
+            background-color: darkgrey;
+            grid-area: nm4;
+        }
+
+
+    </style>
 </head>
+
 <body>
     <a href="index.html">Home page</a>
-
-
-
-
+    <h1>CSS Grid Layout</h1>
+    <br>
+    <hr>
+    <div><span>Flexbox</span> ถูกออกแบบให้จัดการ layout ในทิศทางเดียว 1 มิติ</div>
+    <div><span>Grid layout</span> ถูกออกแบบมาเพื่อจัดการ layout 2 มิติ</div>
+    <hr>
+    <section>การใช้งาน</section>
+    <div>display : grid</div>
+    <section>กำหนดขนาดแถว</section>
+    <div>grid-template-rows : ความสูงของแถวที่ 1 , 2 , 3 ;</div>
+    <section>กำหนดขนาด column</section>
+    <div>grid-template-columns : ความกว้างของ column ที่ 1 , 2 , 3;</div>
+    <hr>
+    <section>Example</section>
+    <div class="grid">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+        <div class="item">item 7</div>
+        <div class="item">item 8</div>
+        <div class="item">item 9</div>
+    </div>
+    <br>
+    <hr>
+    <article>การกำหนดจุดเริ่มต้น - สิ้นสุด</article>
+    <div>Grid properties อื่นๆ</div>
+    <ul>
+        <li>กำหนดสัดส่วนพื้นที่ด้วย span</li>
+        <li>กำหนดสัดส่วนพื้นที่ด้วยหน่วย fr</li>
+        <li>กำหดนระยะห่างพื้นที่ด้วย gap</li>
+        <li>กำหนดชื่อพื้นที่ด้วย grid-template-area</li>
+    </ul>
+    <hr>
+    <article>กำหนดสัดส่วนพื้นที่ด้วย span</article><br>
+    <section>Example</section><br>
+    <div class="grid-sp">
+        <div class="item-sp">item 1</div>
+        <div class="item-sp">item 2</div>
+        <div class="item-sp">item 3</div>
+        <div class="item-sp">item 4</div>
+        <div class="item-sp">item 5</div>
+        <div class="item-sp">item 6</div>
+        <div class="item-sp">item 7</div>
+        <div class="item-sp">item 8</div>
+        <div class="item-sp">item 9</div>
+        <div class="item-sp">item 10</div>
+        <div class="item-sp">item 11</div>
+        <div class="item-sp">item 12</div>
+        <div class="item-sp">item 13</div>
+        <div class="item-sp">item 14</div>
+        <div class="item-sp">item 15</div>
+    </div>
+    <br>
+    <section>การตั้งชื่อ</section>
+    <div class="grid-nm">
+        <div class="item-nm1">item 1</div>
+        <div class="item-nm4">item 4</div>
+        <div class="item-nm2">item 2</div>
+        <div class="item-nm3">item 3</div>
+    </div>
     
+
+
 </body>
+
 </html>
