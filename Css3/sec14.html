@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sec 14 CSS Variable</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root{
+            --box:3px solid red;
+        }
+        .test{
+            border: var(--box);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html">Home page</a>
+    <h1>CSS Variable</h1><br>
+    <div>การสร้างตัวแปรใน css จะช่วยเพิ่มความสะดวกสบายในการกำหนด style ให้กับ element</div>
+    <div>กำหนดชื่อตัวแปรได้เอง ด้วยเครื่องหมาย -- ตามด้วยชื่อตัวแปร</div><br>
+    <section>วิธีใช้งาน</section>
+    <ol>
+        <li>สร้าง :root{} ขึ้นมา</li>
+        <li>กำหนดชื่อและค่าตัวแปรใน root โดยชื่อตัวแปรจะมี -- นำหน้า</li>
+        <li>เรียกใช้งานโดยใช้ :var(ชื่อตัวแปร);</li>
+        <li>ตัวแปรสามารถอ้างอิงตัวแปรอื่นได้โดย var()</li>
+    </ol>
+    
+
+    <p class="test">Lorem ipsum dolor sit amet.</p>
+    
+
+
+
+    
+</body>
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,76 @@
     <title>sec 12 Advance Selectors</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <a href="index.html">Home page</a>
     <h1>Advance Selectors </h1>
+    <ul>
+        <li>targeted selectors</li>
+        <ul>
+            <li>Descendent Selector</li>
+            <li>Child Selector</li>
+        </ul>
+        <li>Style By Attribute</li>
+        <li>Special Arttibute</li>
+        <li>Pseudo Selectors</li>
+        <ul>
+            <li>First-child</li>
+            <li>last-chiild</li>
+            <li>nth-child</li>
+        </ul>
+        <li>Before & After Pseudo</li>
+
+    </ul>
+    <br>
+    <hr>
+    <article>Targeted Selectors</article><br>
+    <section>Descendent Selector</section>
+    <div>ใช้เว้นวรรคในการเข้าไประบุตัว</div>
+    <div><span>Ex.</span> div p {}</div><br>
+    <section>Child Selector</section>
+    <div>ใช้เครื่องหมาย > ในการระบุตัวถัดไปของตัวที่เลือก</div>
+    <div><span>Ex.</span> div>p {}</div>
+    <br>
+    <hr>
+    <article>Style by Attribute</article><br>
+    <div>ใช้ [] ในการกำหนด attribute ที่ต้องการ</div>
+    <div><span>Ex.</span> a[target] {}</div><br>
+    <hr>
+    <article>Special Arttibute</article><br>
+    <div>อ้างอิงผ่าน Tag แล้ว Attribute</div>
+    <div><span>EX.</span> input[type='email'] , input[type='text'] {}</div>
+    <br>
+    <hr>
+    <article>Pseudo Selectors</article><br>
+    <section>First-child</section>
+    <div>ใช้สำหรับเลือกตัวแรก โดยใช้ :First-child</div>
+    <div><span>Ex.</span>li:first-child {}</div>
+    <br>
+    <section>Last-child</section>
+    <div>ใช้สำหรับเลือกตัวสุดท้าย โดยใช้ :last-child</div>
+    <div><span>Ex.</span>li:last-child {}</div>
+    <br>
+    <section>nth-child</section>
+    <div>ใช้สำหรับระบุตัวที่ต้องการเลือกโดยใช้ :nth-child</div>
+    <div><span>Ex.</span>li:nth-child(5) เลือกตัวที่ 5</div>
+    <div>หรือใช้ li:nth-last-child(5) เลือกตัวที่ 5 นับจากตัวสุดท้ายขึ้นมา</div>
+    <br>
+    <section>เพิ่มเติม</section>
+    <div>nth-child(3n)  กรณีเติม n หมายความว่าจะทำทุกๆ 3 ตัว</div>
+    <div>nth-child(3n+1)  กรณีเติม n หมายความว่าจะทำทุกๆ 3 ตัว โดยเริ่มต้นที่ตัวที่ 1 </div>
+    <div>nth-child(odd) เป็นการเลือกตัวที่เป็นเลขคี่</div>
+    <div>nth-child(even) เป็นการเลือกตัวที่เป็นเลขคู่</div>
+    <br><hr>
+    <article>Before & After Pseudo</article><br>
+    <div>เป็นการแทรกเนื้อหาไป ก่อน หรือ หลัง element โดยใช้ ::before , ::after</div>
+    <div><span>Ex. </span>.aa::before or .aa::after</div>
 
 
 
-    
+
+
+
 </body>
+
 </html>

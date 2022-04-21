@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sec 15 จัดการ element ด้วย Transform</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box {
+            border: 2px solid red;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 30%;
+
+            /* ย้ายตำแหน่ง Box */
+            /* transform: translate(150px,100px); */
+            /* transform: rotate(45deg);  
+            สามารถกำหนดเป็น rotatex , rotateY เพื่อเลือกแกนหมุนได้
+            transform: scale(1.6,2); */
+            transform: skew(10deg,20deg);
+
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">Home page</a>
+    <h1>จัดการ element ด้วย Transform</h1><br>
+    <ul>
+        <li><span>Translate (x,y)</span> : กำหนดตำแหน่ง Element</li>
+        <li><span>Scale (x,y)</span> : ขยาย Element</li>
+        <li><span>Rotate</span> : กำหนดการหมุน Element</li>
+        <li><span>SkewX</span> : กำหนดการเอียงแกน x</li>
+        <li><span>SkewY</span> : กำหนดการเอียงแกน Y</li>
+    </ul>
+    <br>
+    <hr>
+    <article>Example</article><br>
+    <div class="box">BOX</div>
+
+
+
+
+</body>
+
+</html>

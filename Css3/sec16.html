@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sec 16 เปลี่ยนแปลง Element ด้วย Transition</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .box{
+            background-color: gray;
+            width: 100px;
+            height: 100px;
+            transform: translate(150px,100px);
+            border: 3px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: red;
+
+            /* Transition */
+
+            /* transition-property: background-color;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transition-delay: 2s; */
+
+            /* Transition แบบย่อ */
+
+            /* transition: background-color 1s ease-in 2s; */
+            transition: all 3s ease-in 2s;
+            /* transition: background 0.5s , width 2s , height 2s ease-in-out 3s; */
+
+        }
+        .box:hover{
+            background-color: pink;
+            width:200px;
+            height: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="index.html">Home page</a>
+    <h1>เปลี่ยนแปลง Element ด้วย Transition</h1><br>
+    <div><span>Transition</span> คือ การเปลี่ยนค่าใน element จากค่าหนึ่งไปสู่อีกค่าหนึ่งในช่วงเวลาที่กำหนด</div>
+    <ul>
+        <li><span>Transition-properties</span> คือ รูปแบบที่ต้องการเปลี่ยนแปลงค่า</li>
+        <li><span>Transition-duration</span> คือ ระยะเวลาในการเปลี่ยนแปลงค่า</li>
+        <li><span>Transition-timing-fuction</span> คือ รูปแบบฟังก์ชั่นของการเปลี่ยนแปลงค่า (ease-in)</li>
+        <li><span>Transition-delay</span> คือ ระยะเวลาที่จะเริ่มต้นการเปลี่ยนแปลงค่า</li>
+    </ul>
+    <br><hr>
+    <article>Example</article><br>
+    <div class="box">BOX</div>
+
+
+
+
+
+    
+</body>
+</html>
