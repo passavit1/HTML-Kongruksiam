@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 10 : Function</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>Function</h1>
+    <ol>
+        <li>ชุดคำสั่งที่นำมาเขียนรวมกันเป็นกลุ่ม</li>
+        <li>โปรแกรมย่อย ที่เป็นส่วนหนึ่งของโปรแกรมหลัก</li>
+    </ol>
+    <article>รูปแบบของฟังก์ชั่น</article>
+    <ul>
+        <li>ฟังก็ชั่นที่ไม่มีการรับและส่งค่า</li>
+        <li>ฟังก์ชั่นที่มีการรับค่าเข้ามาทำงาน</li>
+        <li>ฟังก์ชั่นที่มีส่งค่าออกมา</li>
+        <li>ฟังก์ชั่นที่มีการรับค่าเข้ามาและส่งค่าออกไป</li>
+    </ul>
+
+    <article>Example</article>
+    <br>
+    <button onclick="message();">Message</button>
+    <button onclick="supp();">Dont click</button>
+
+    <script>
+        // ฟังก็ชั่นที่ไม่มีการรับและส่งค่า
+
+        function a() {
+            console.log('hello world')
+        }
+
+        function message() {
+            alert('warning')
+        }
+
+        function supp() {
+            document.write('Hello mother fucker')
+        }
+
+        // ฟังก์ชั่นที่มีการรับค่าเข้ามาทำงาน
+        
+        function calculator(x) {
+            console.log(x)
+
+        }
+
+        function fullname(fname , lname){
+            console.log('fname = ' , fname , 'lname = ' , lname)
+        }
+
+        // ฟังก์ชั่นที่มีส่งค่าออกมา
+
+        function getip(){
+            return '127.0.0.0.1'
+        }
+
+
+        // ฟังก์ชั่นที่มีการรับค่าเข้ามาและส่งค่าออกไป
+
+        function calcu(x,y){
+            return x+y;
+        }
+
+
+        // เรียกใช้งาน Funtion
+
+
+        fullname('passavit' , 'maicharoen')
+
+
+        let ip = getip();
+        console.log(ip);
+
+
+        let sum = calcu(70,90);
+        sum = calcu(33,55);
+        
+        console.log(sum);
+        console.log(calcu(77,44))
+
+    </script>
+
+</body>
+
+</html>

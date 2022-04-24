@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secุ : ตัวดำเนินการทางตรรกศาสตร์</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>ตัวดำเนินการทางตรรกศาสตร์</h1>
+    <br>
+    <ul>
+        <li><span>&&</span> = and</li>
+        <li><span>||</span> = or</li>
+        <li><span>!</span> = not</li>
+    </ul>
+
+    <article>ตัวเพิ่มค่า - ลดค่า</article>
+    <ul>
+        <li><span>++</span></li>
+        <ul>
+            <li><span>++a</span> = เพิ่มค่าให้ a ก่อน 1 ค่าแล้วนำไปใช้</li>
+            <li><span>a++</span> = นำ a ไปใช้ก่อนแล้วค่อยเพิ่มค่า</li>
+        </ul>
+        <li><span>--</span></li>
+        <ul>
+            <li><span>--a</span> = ลดค่าให้ a ก่อน 1 ค่าแล้วนำไปใช้</li>
+            <li><span>a--</span> = นำ a ไปใช้ก่อนแล้วค่อยลดค่า</li>
+        </ul>
+    </ul>
+
+
+    <script>
+        let a = 100;
+        console.log(a >= 70 && a <= 90);
+        console.log(a >= 70 || a <= 90);
+    </script>
+
+    <script>
+        let b = 10;
+        console.log('before' , b);
+        console.log('postfix' , b++);
+        console.log('After' , b);
+
+        let c = 10;
+        console.log('before' , c);
+        console.log('prefix' , ++c);
+        console.log('After' , c);
+
+
+
+    </script>
+
+</body>
+
+</html>

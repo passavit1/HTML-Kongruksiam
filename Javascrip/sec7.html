@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 8 : โครงสร้างควบคุม</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>โครงสร้างควบคุม</h1>
+    <ul>
+        <li>แบบลำดับ (Sequence)</li>
+        <li>แบบมีเงื่อนไข (Condition)</li>
+        <li>แบบทำซ้ำ (Loop)</li>
+    </ul>
+    <article>แบบมีเงื่อนไข</article>
+    <ul>
+        <li>if</li>
+        <ul>
+            <li>if statement</li>
+            <li>if else</li>
+            <li>if หลายเงื่อนไข else if ถ้าเงื่อนไขไหนเป็นจริงจบทันที</li>
+        </ul>
+        <li>Switch...case</li>
+        <div>- กำหนดเงื่อนไขคล้ายๆ if แต่จะเลือกเพียงหนึ่งทางเลือกเท่านั้น สามารถใช้ default เป็น else ได้</div>
+
+    </ul>
+    <section>Ternary Operator</section>
+    <div>ตัวแปร = (เงื่อนไข) ? คำสั่งเมื่อเงื่อนไขเป็นจริง : คำสั่งเมื่อเงื่อนไขเป็นเท็จ</div>
+
+
+    <script>
+        let a = 90;
+        if (a >= 80) {
+            console.log('A')
+        } else if (a >= 60) {
+            console.log('B')
+        } else if (a >= 30) {
+            console.log('C')
+        } else {
+            console.log('done')
+        }
+
+        // Ternary Operator
+
+        let b = 50
+        result = (b >= 20) ? 'pass' : 'fail';
+        console.log(result)
+
+        // if ซ้อน if
+
+        let c = 44
+        if (c >= 60) {
+            if (c > 90) {
+                console.log('more than 90')
+            } else if (c > 80) {
+                console.log('more than 80')
+            } else if (c > 70) {
+                console.log('more than 70')
+            } else {
+                console.log('more than 60')
+            }
+
+        } else {
+            console.log('under60')
+        }
+
+        // switch...case
+
+        let d = 3
+        switch (d) {
+            case 1: console.log('first');
+                break;
+            case 2: console.log('second');
+                break;
+            case 3: console.log('Trird');
+                break;
+            case 4: console.log('Fourth');
+                break;
+            default : console.log('other')
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

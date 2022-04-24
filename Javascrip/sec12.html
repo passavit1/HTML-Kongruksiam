@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 12 : Array Properties</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>Array Properties</h1><br>
+    <article>หาจำนวนสมาชิกและเรียงลำดับ</article>
+    <ul>
+        <li><span>let color = </span>['red , 'blue' , 'white'];</li>
+        <li><span>let x = </span>color.length;</li>
+        <li><span>let y = </span>color.sort(); ถ้าเรียงจากหลังมาหน้า color.reverse();</li>
+    </ul>
+    <article>สมาชิกตัวแรกและตัวสุดท้าย</article>
+    <ul>
+        <li><span>let first</span> = color[0];</li>
+        <li><span>let last</span> = color[color:length-1];</li>
+    </ul>
+    <article>การเพิ่มสมาชิก</article><br>
+    <span>color.push('red');</span>
+
+
+    <script>
+        let color = ['red' , 'blue' , 'green' , 'white'];
+        let count = color.length;
+        console.log(count);
+
+        console.log('before sort' , color)
+        let result = color.sort();
+        console.log(result);
+
+        
+        let first = color[0];
+        console.log(first)
+
+
+        // เพิ่ม item เข้าไป
+
+        console.log('before add' , color)
+        color.push('purple' , 'pink')
+        console.log('after add' , color )
+    </script>
+</body>
+
+</html>

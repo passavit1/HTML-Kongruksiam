@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 8 : while loop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>while loop</h1>
+    <ul>
+        <li>while</li>
+        <li>for</li>
+        <li>do...while</li>
+        <li>คำสั่งอื่นๆ</li>
+        <ul>
+            <li>Break = สั่งให้หยุดการทำงาน</li>
+            <li>Continue = ข้ามรอบนั้น</li>
+        </ul>
+    </ul>
+    <article>While loop</article>
+    <div>ทำงานไปเรื่อยๆเมื่อเงื่อนไขเป็น จริง</div>
+    <article>For loop</article>
+    <div>ทำงานไปเรื่อยๆ และ ตามจำนวนรอบที่กำหนดมา</div>
+    <article>Do...while</article>
+    <div>ทำซ้ำอย่างน้อย 1 รอบแล้วมาตรวจสอบคำสั่งที่ while</div>
+
+    <script>
+        // loop while
+
+        let a = 1 
+        while(a<=3){
+            console.log('hello world' , a);
+            a++;
+        }
+
+        // For loop
+        
+        for(let b =1 ; b<= 5 ; b+=2){
+            console.log('hello' , b)
+        }
+
+        // DO...while
+
+        let c = 3
+        do{
+            console.log('Do_while' , c);
+            c++;
+        }while(c<=4);
+
+        // continue
+
+        for(let d =1 ; d<=10 ; d++){
+            if(d==5){continue}
+            console.log('round' , d)
+            
+        }
+    </script>
+
+</body>
+</html>

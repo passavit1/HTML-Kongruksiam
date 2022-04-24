@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 4 : การแปลงชนิดข้อมูล</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>การแปลงชนิดข้อมูล</h1><br>
+    <section>Str > number</section>
+    <ul>
+        <li>x = parseint('1.2');</li>
+        <li>x = parseFloat('1.2');</li>
+        <li>ใช้เครื่องหมาย + เพิ่มไปข้างหน้า</li>
+    </ul>
+    <section>Number > Str</section>
+    <ul>
+        <li>ใช้ toString()</li>
+    </ul>
+    
+    <script>
+        let number = parseInt('11');
+        console.log(typeof(number))
+        number = toString(number)
+        console.log(typeof(number))
+    </script>
+    
+</body>
+</html>
