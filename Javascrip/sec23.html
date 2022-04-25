@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 23 : Event Listener</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>Event Listener</h1>
+    <div>เหตุการณ์หรือการกระทำบางอย่างที่เกิดขึ้นกับ element แต่เขียนใน javascrip</div><br>
+    <article>โครงสร้าง</article><br>
+    <div>element.addeventlistener(event,callback);</div><br>
+
+    <article>Example</article>
+    <br>
+
+    <select name="" id="menu" >
+        <option value="javascrip">javascrip</option>
+        <option value="python">python</option>
+        <option value="bootstrap">bootstrap</option>
+    </select>
+
+    <div id="display"></div><br>
+    <button id="btn">alert</button>
+
+    <script>
+        // อ้างอิง
+
+        const menu = document.getElementById('menu');
+        const display=document.getElementById('display');
+        const btx=document.getElementById('btn');
+
+        // event
+
+        menu.addEventListener('change',getmenu);
+        btn.addEventListener('click',showwelcome);
+
+        function getmenu(){
+            display.innerText=menu.value;
+        }
+
+        function showwelcome(){
+            alert('welcome to webpage')
+        }
+
+
+    </script>
+</body>
+
+</html>

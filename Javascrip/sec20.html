@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 20 : DOM Nodes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>DOM Nodes</h1>
+    <div>Nodes = สมาชิกที่อยู่หน้าเว็บของเรา</div>
+    <ul>
+        <li>document.createelement(element) = สร้าง element ใหม่</li>
+        <li>document.removechild(element) = ลบ node ลูก</li>
+        <li>document.appendchild(element) = นำ element ไปต่อใน node แม่</li>
+        <li>document.replacechild(new , old) = แทนที่ element</li>
+    </ul>
+    <article>Example</article>
+    <p>hello world</p>
+    <p>javascrip</p>
+    <p>Passavit</p>
+    <ul id="menu">
+        <li id="item1">a</li>
+        <li id="item2">b</li>
+        <li id="item3">c</li>
+    </ul>
+    <button onclick="additem()">เพิ่มรายการ</button>
+    <button onclick="removeitem()">ลบรายการ</button>
+    <button onclick="replaceb()">แทนที่ B</button>
+
+    <script>
+        const textall = document.querySelectorAll('p');
+        let message = textall[1].innerHTML;
+        console.log(message);
+
+        const menu = document.getElementById('menu');
+        
+        // การเพื่ม 
+        let count = 1;
+        function additem() {
+            const item = document.createElement('li'); // สร้าง li
+            item.innerText = 'item'+(count++);
+            menu.appendChild(item);
+        }
+        
+        // การลบ
+        function removeitem() {
+            const menu = document.getElementById('menu'); 
+            const item = document.getElementById('item3');
+            menu.removeChild(item);
+            
+        }
+        
+        // การแทนที่
+        function replaceb(){
+        const itemb = document.getElementById('item2');
+        const newitem = document.createElement('li');
+        newitem.innerText ='x';
+        menu.replaceChild(newitem,itemb);
+        }
+    </script>
+
+</body>
+
+</html>

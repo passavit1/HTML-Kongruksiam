@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 16 : Javascrip Object</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>Javascrip Object</h1>
+    <br>
+    <article>โครงสร้าง</article><br>
+    <div>let ชื่อวัตถุ = {propertyname : value , propertyname : value , ... };</div>
+    <article>การเข้าถึงข้อมูล</article><br>
+    <div> objectname.propertyname</div>
+    <div> objectname['propertyname']</div>
+    <br>
+    <article>method</article>
+    <div>ใช้ this ในการอ้างอิงใน object</div>
+    <div>เรียกใช้ objectname.(functionname()):</div>
+
+
+    <script>
+        let product = {
+            name:'pass',
+            age:28,
+            height:168+'cm',
+            user:function(){
+                return 'name = ' + this.name + ' age = ' + this.age + ' height = ' + this.height;
+            },
+            discount:function(){
+                return this.age - 20;
+            },
+            getcolor:function(){
+                return this.name
+            }
+
+        };
+        console.log(product.height)
+        console.log(product['age'])
+
+        console.log(product.user());
+        console.log(product.discount());
+        console.log(product.getcolor());
+
+
+
+
+    </script>
+</body>
+</html>

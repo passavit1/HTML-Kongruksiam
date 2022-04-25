@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 17 : การยืนยันด้วย confirm</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>การยืนยันด้วย confirm</h1>
+    <br>
+    <div>เป็นหน้าต่างสอบถามยืนยันจากผู้ใช้งาน</div>
+    <ul>
+        <li><span>true</span> : เมื่อผู้ใช้คลิก ok</li>
+        <li><span>false</span> : เมื่อผู้ใช้คลิก cancel</li>
+    </ul>
+    <button onclick="deletedata()">delete</button>
+    
+
+
+
+    <script>
+        function deletedata(){
+            let result = confirm('ต้องการลบข้อมูล')
+            if(result){
+                console.log('delete done')
+            }else{
+                console.log('cancel')
+            }
+
+            console.log(result);
+            
+        }
+
+
+    </script>
+</body>
+</html>

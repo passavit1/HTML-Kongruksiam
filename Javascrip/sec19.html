@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 19 : การเข้าถึง HTML element</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>การเข้าถึง HTML element</h1><br>
+
+    <p>my name is passavit</p>
+    <p id="demo">id demddo</p>
+    <p class="titt">class ti</p>
+    <button onclick="displaytext()">แสดงข้อมูล</button>
+    <div>ใช้ Queryselector ในการเข้าถึง</div>
+
+
+
+    <script>
+
+        // การอ้างอิงถึง
+
+        let a = document.getElementsByTagName('p');
+        console.log(a);
+
+        let b = document.getElementById('demo');
+        console.log(b);
+
+        let x = 10;
+        let y = 20;
+
+        const demo = document.querySelector('#demo');
+        const fuu = document.querySelector('.titt');
+
+        function displaytext() {
+            b.innerHTML = '<b>เปลี่ยน innertext </b>' + y;  //สามารถเขียนได้ 2 แบบ
+            b.innerHTML = `<b>เปลี่ยน innertext </b> ${y}`;
+        }
+
+        // อ้างอิงโดยใช้ Queryselector
+
+        let t = document.querySelector('p');
+        let bb = document.querySelector('#demo')
+
+        console.log(bb)
+
+        // การเปลี่ยนแปลงข้อมูล
+
+        // b.innerText='เปลี่ยน innertext'
+
+        // เปลี่ยน style 
+
+        demo.style.color = 'red';
+        fuu.style.backgroundcolor = 'black'
+
+
+    </script>
+</body>
+
+</html>

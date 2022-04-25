@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 22 : DOM Event</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+</head>
+<body onload="welcome()">
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>DOM Event</h1>
+    <div>เหคุการณ์หรือการกระทำบางอย่าง ที่เกิดขึ้นกับ element</div>
+    <ul>
+        <li><span>onfocus=''</span> = เมื่อ element ได้รับการโฟกัส</li>
+        <li><span>onblur=''</span> = เมื่อ element สูญเสียการโฟกัส</li>
+        <li><span>onchange=''</span> = เมื่อมีการเปลี่ยนแปลงค่าในฟอร์มรับข้อมูล</li>
+        <li><span>onselect=''</span> = เมื่อผู้ใช้เลือกข้อความ</li>
+        <li><span>onsubmit=''</span> = เมื่อผู้ใช้คลิกปุ่ม submit</li>
+        <li><span>onlad=''</span> = เมื่อทำการโหลดหน้าเว็บเพจ</li>
+        <li><span>onunload=''</span>เมื่อยกเลิกการโหลด</li>
+        <li><span>onmouseover=''</span> = เมื่อเมาส์อยู่บน object นั้นๆ</li>
+        <li><span>onmouseout=''</span> = เมื่อเมาส์ถูกเลื่อนออก</li>
+        <li><span>onclick=''</span> = เมื่อมีการกดคลิกเมาส์</li>
+        
+
+    </ul>
+    <br>
+    <article>Example</article>
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae modi perferendis culpa laboriosam quis ipsam pariatur cumque, possimus nam ipsum?</p>
+    </div>
+
+    <label for="">name</label>
+    <input type="text" placeholder="your name" onfocus="highlight(this)" onblur="unhighlight(this)">
+    <textarea name="" id="" cols="20" rows="3" onfocus="highlight(this)"onblur="unhighlight(this)"></textarea><br><br>
+    <select name="" id="menu" onchange="getmenu()">
+        <option value="javascrip">javascrip</option>
+        <option value="python">python</option>
+        <option value="bootstrap">bootstrap</option>
+    </select>
+    <p id="display"></p>
+    <a href="" onmouseover="mover(this)" onmouseout="unmover(this)">menu1</a>
+    <a href="" onmouseover="mover(this)" onmouseout="unmover(this)">menu2</a>
+
+
+
+
+    <script>
+        function welcome(){
+            // alert('welcome to webpage')
+        }
+
+        function highlight(obj){
+            obj.style.background='yellow'
+        }
+
+        function unhighlight(obj){
+            obj.style.background='black'
+        }
+
+        function getmenu(){
+            const menu=document.getElementById('menu');
+            const display=document.getElementById('display')
+            console.log(menu.value.toUpperCase());
+            display.innerText=menu.value;
+        }
+
+        function mover(obj){
+            obj.style.background='yellow'
+        }
+
+        function unmover(obj){
+            obj.style.background='red'
+        }
+
+
+    </script>
+
+
+</body>
+</html>

@@ -4,11 +4,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sec 13 : โครงสร้างควบคุม</title>
+    <title>Sec 15 : การรวม , เรียง Array</title>
     <link rel="stylesheet" href="style.css">
     <script src="/Javascrip/javascrip.js"></script>
 </head>
 <body>
-    <a href="/HTML-Kongruksiam/Javascrip/index.html">homepage</a>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>การรวม Array</h1>
+    <div>let var = array.concat(array1,array22);</div><br>
+    <article>การเรียง array</article>
+    <div>points.sort(Function(a,b){return a-b} เรียงจากน้อยไปมาก</div>
+    <div>points.sort(Function(a,b){return b-a} เรียงจากมากไปน้อย</div>
+    <script>
+
+        // concat
+
+        let color =['red' , 'black' , 'pink' , 'gray']
+        let com = ['mouse' , 'ketboard' , 'mornitor']
+
+        color=color.concat(com);
+        console.log(color);
+
+
+        // sort
+
+        // น้อยไปมาก
+
+        let point=[20,1,4,30,22,54];
+
+        console.log(point);
+
+        let sr = point.sort(function(a,b){
+            return a-b;
+        })
+
+        console.log(sr)
+
+        //มากไปน้อย
+
+        let rv = point.sort(function(a,b){
+            return b-a;
+        })
+
+        console.log(rv)
+    </script>
+
 </body>
 </html>

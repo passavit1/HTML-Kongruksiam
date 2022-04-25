@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sec 21 : DOM CSS Add & Remove Class</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/Javascrip/javascrip.js"></script>
+    <style>
+        .darkmode {
+            border: 1px solid blue;
+            background-color: black;
+            color: white;
+            padding: 30px;
+            margin: 10px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <a href="/Javascrip/index.html">Home page</a>
+    <h1>DOM CSS Add & Remove Class</h1>
+    <ul>
+        <li>element.classlist.add('class'); = เพิ่ม class style</li>
+        <li>element.classlist.remove('class'); = ลบ class style</li>
+        <li>element.classlist.toggle('class'); = สลับ class style</li>
+        <li>element.classlist.contains('class'); = เปรียบเทียบ class style </li>
+    </ul>
+    <article>Example</article>
+    <div id="box">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates excepturi quod praesentium non impedit
+            ipsa quisquam minima quasi laboriosam animi.</p>
+    </div>
+    <button onclick="adddarkmode()">add style</button>
+    <button onclick="removed()">remove style</button>
+    <button onclick="switchd()" >switch style</button>
+
+
+    <script>
+        const box = document.getElementById('box');
+        let status ;
+
+        // เพิ่ม class
+        function adddarkmode() {
+            box.classList.add('darkmode');
+        }
+
+        // ลบ class
+        function removed(){
+            box.classList.remove('darkmode');
+        }
+
+        // สลับ class
+        function switchd(){
+            box.classList.toggle('darkmode');
+            status=box.classList.contains('darkmode');
+            if(status){
+                box.style.color='yellow'
+            }else{
+                box.style.color='red'
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
