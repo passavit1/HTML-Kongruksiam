@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascrip ES6</title>
+    <link rel="stylesheet" href="/Javascrip/style.css">
+</head>
+
+<body>
+    <h1>ES6</h1>
+    <br>
+    <article>สารบัญ</article>
+    <ol>
+        <li><a href="/Javascrip/Javascript ES6/sec1.html">sec 1 : Block Scope</a></li>
+        <li><a href="/Javascrip/Javascript ES6/sec2.html">sec 2 : Object</a></li>
+    </ol>
+    <br>
+    <article>Spread Operator</article><br>
+    <div>นำข้อมูลในอีก array มารวมกับอีก array</div>
+    <div>เติมจุดสามจุดหน้า array</div>
+    <div>const a1 = ['a','b','c']</div>
+    <div>const b1 = ['d','e','f',...a1]</div>
+    <div>console.log(b1) = ['d','e','f','a','b','c'] </div>
+    <div>หรือจะใช้คำสั่ง push คือ b1.push(...a1) แบบนี้ก็ได้</div>
+
+    <script>
+        const secd = ['d', 'e', 'f']
+        const fir = ['a', 'b', 'c', ...secd]
+        const third = ['o', 'm', 'g']
+        console.log(fir)
+        fir.push(...third)
+        console.log(fir)
+    </script>
+
+    <br>
+    <article>Rest Parameter</article>
+    <br>
+    <div>ใช้ในการส่งค่า Parameter เข้าไปทำงานใน Funtion โดยใช้เครื่องหมาย ...</div>
+
+    <script>
+        summation = (...numberar) => {
+            let total = 0;
+            for (let number of numberar) total += number
+            return total
+        }
+        console.log(summation(3, 5, 23, 77))
+    </script>
+
+    <br>
+    <article>Destructuring (การสลายโครงสร้าง)</article><br>
+    <div>กำหนดค่าที่อยู่ภายใน Array หรือ object ให้กับตัวแปรโดยใช้วิธีการจับคู่</div>
+    <p>const colors=['red','white']</p>
+    <p>const [a,b] = colors</p>
+
+    <script>
+        // ทำการขับคู่ array
+        const colorss = ['ss', 'ddd']
+        const [, num2] = colorss //ใส่ , เผื่อเลื่อนจับคู่ตัวแรกไป
+        console.log(num2)
+
+        // ทำการจับคู่ object
+
+        const product = {
+            productname: 'computer',
+            price: 30000,
+            stock: 10
+        }
+        const { productname: n, price: p, stock: s } = product
+        console.log(n)
+        console.log(p)
+        console.log(s)
+    </script>
+
+    <br>
+    <article>default Parameter</article>
+    <p>กำหนดค่าเริ่มต้นให้กับ function โดยใส่ = ไว้ที่ Parameter ได้เลย</p>
+
+    <script>
+        getdata = (cusname, cusaddress = 'BKK') => {
+            const address = `name : ${cusname}
+            address : ${cusaddress}`
+            return address
+        }
+        console.log(getdata('passavit', 'CNX'));
+        console.log(getdata('Jojo',));
+
+    </script>
+
+    <article>ทำงานกับ array</article>
+    <p>join('สามาแปลงสัญลักษณ์ในนี้ได้') = แปลง array ให้เป็น String</p>
+    <p>let name = array1.concat(array2) เป็นการรวม 2 array เข้าด้วยกัน </p>
+
+    <script>
+        const data1 = [100, 200, 300]
+        const data2 = [400, 500, 600]
+        const result = data1.join('*');
+        console.log(result)
+        const alldata = data1.concat(data2)
+        console.log(alldata)
+        console.log(alldata.join('|'))
+
+    </script>
+
+    <article>เพิ่มและลบสมาชิกใน array</article>
+    <ul>
+        <li>push = เพิ่มสมาชิกต่อท้าย</li>
+        <li>pop = ลบสมาชิกตัวหลังสุดออก</li>
+        <li>shift = ลบสมาชิดตัวด้านหน้าสุด</li>
+        <li>unshift = เพิ่มสมาชิกเข้าไปหน้าสุด</li>
+        <li>splice(ตำแหน่ง index ที่จะลบ,จำนวนที่จะลบ,สามารถแทรกสมาชิกในตำแหน่งที่ลบ)</li>
+        <li>slice(ตำแหน่งเริ่มต้น,ตำแหน่ง index สุดท้ายที่ต้องการใช้ +1) = ดึงช่วงสมาชิกออกมาใช้</li>
+    </ul>
+
+    <script>
+        const data = [10, 20, 30]
+        data.push(...[50, 60, 70])
+        console.log(data)
+        data.pop()
+        console.log(data)
+        data.shift()
+        console.log(data)
+        data.unshift(...[33, 44, 55])
+        console.log(data)
+        data.splice(1, 3, 88)
+        console.log(data)
+        console.log(data.slice(1, 4))
+    </script>
+
+    <article>การ loop ข้อมูลใน array</article>
+    <ul>
+        <li>for loop (ใช้ break , continue ได้)</li>
+        <li>for each (ใช้ break , continue ไม่ได้)</li>
+        <li>for of (ใช้ break , continue ได้)</li>
+    </ul>
+
+    <script>
+
+        const dt = [10, 20, 30, 40, 50]
+
+        // for loop
+
+        for (let i = 0; i < dt.length; i++) {
+            if (dt[i] >= 30) break
+            console.log(`ลำดับท่ี่ ${i} = ${dt[i]}`)
+        }
+
+        // for each
+
+        let sum = 0
+        dt.forEach(e => {
+            sum += e
+            console.log(`member ${e}`);
+            console.log(`sum ${sum}`);
+        });
+
+        // for of
+
+        for (const ele of dt) {
+            if (ele >= 30) break
+            console.log(`member ${ele}`)
+        }
+    </script>
+
+    <article>ค้นหาข้อมูลใน array</article>
+    <ul>
+        <li>indexof = หาตำแหน่ง index ที่ต้องการค้น</li>
+        <li>find = ค้นหาว่ามี ข้อมูลใน array ไหม</li>
+        <li>findindex = ค้นหาตำแหน่งข้อมูลที่ค้นหาใน array</li>
+    </ul>
+
+    <script>
+        const col = ['red', 'blue', 'white', 'black', 'pink', 'yellow']
+
+        // indexof
+
+        console.log(col.indexOf('white'))
+
+        // find
+
+        const search = col.find(element => element === 'black')
+        console.log(search)
+
+        // findindex
+
+        const searc = col.findIndex(element => element === 'black')
+        console.log(searc)
+    </script>
+
+    <article>Array map</article>
+    <p>ส่งค่าเข้าไปแล้วเปลี่ยนค่าออกมา</p>
+
+    <script>
+        const numb = [10, 20, 30, 40, 50]
+
+        // เคสตัวเลข
+
+        const sult = numb.map(e => e * 2)
+        console.log(sult)
+
+        // เคสข้อความ
+
+        const daa = ['rain', 'sunny', 'storm', 'foggy']
+        const suul = daa.map((z, c) => {
+            return `day = ${c + 1} , it = ${z}`
+        })
+        console.log(suul)
+
+        // เคส object
+
+        const fore = [
+            { day: '01/06/2022', weather: 'hot', temp: 28 },
+            { day: '02/06/2022', weather: 'foggy', temp: 22 },
+            { day: '03/06/2022', weather: 'rain', temp: 18 }
+        ]
+        const casti = fore.map(j => j.weather)
+        console.log(casti)
+
+    </script>
+
+    <article>Array filter</article>
+    <div>คัดกรองสมาชิกภายใน array ตามเงื่อนไขที่กำหนดขึ้นมา</div>
+
+    <script>
+        const ber = [10, 20, 30, 40, 50]
+
+        // เงื่อนไขตัวเลขมากกว่า 20
+
+        const fill = ber.filter(e => e > 20)
+        console.log(fill)
+
+        // สมาชิก object
+
+        const employ = [
+            { name: 'gunn', salary: 30000, job: 'programmer' },
+            { name: 'Funn', salary: 20000, job: 'accrount' },
+            { name: 'joyy', salary: 10000, job: 'bank' },
+            { name: 'bell', salary: 15000, job: 'market' },
+            { name: 'mark', salary: 25000, job: 'programmer' }
+        ]
+
+        const more = employ.filter(e => e.salary>=20000).filter(e=>e.job==='programmer')
+        console.log(more)
+    </script>
+
+    <article>Array reduce</article>
+    <div> array.reduce((ค่าที่ถูกประมวลผล , element)=>{},ค่าเริ่มต้น) </div>
+    <script>
+        const aaa = [10,20,30,60] 
+        const bbb = [
+            {name : 'computer' , price : 2000},
+            {name : 'mouse' , price : 500},
+            {name : 'keyboard' , price : 800}
+        ]
+
+        //map
+        const mapdata=aaa.map(e=>100);
+        console.log(mapdata);
+
+        //reduce
+        const suuma = aaa.reduce((value,e)=>e+value,0)  //value = ค่าเริ่มต้น  , 0 คือค่าเริ่มต้น
+        console.log(suuma)
+
+        const suumb = bbb.reduce((value,e)=>e.price+value,0)  //value = ค่าเริ่มต้น  , 0 คือค่าเริ่มต้น
+        console.log(suumb)
+
+    </script>
+
+</body>
+
+</html>
