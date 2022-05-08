@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="/Bootstrap/bootstrap-5.1.3-dist/css/bootstrap.min.css">
     <script src="/Bootstrap/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="/Bootstrap/bootstrap-5.1.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="/Bootstrap/bootstrap-5.1.3-dist/js/bootstrap.js"></script>
 </head>
 
 <body>
@@ -131,9 +133,313 @@
     <div><u> Ex.</u> pb-0 , pt-1 , ps-2 , pe-3</div>
     <div style="color: red;">หัวข้อที่ 7 - กำหนดขนาด</div>
     <ul>
-        <li>w (width) กำหนดความกว้าง</li>
-        <li>h (height) กำหนดความสูง</li>
+        <li>w (width) กำหนดความกว้าง ใช้ w-[25%,50%,75%,100%,auto]</li>
+        <li>h (height) กำหนดความสูง ใช้ h-[25%,50%,75%,100%,auto]</li>
     </ul>
+    <div style="color: red;">หัวข้อที่ 7 - Border</div>
+    <div>กำหนดเส้นขอบ สี ขนาด ขอบโค้ง(rounded) ขนาดความโค้ง</div>
+    <div><b>ex.</b> class = border - [top,bottom,start,end]</div>
+    <ul>
+        <li>border : 4 ทิศ</li>
+        <li>border-top : เส้นบน</li>
+        <li>border-bottom : เส้นล่าง</li>
+        <li>border-start : เส้นซ้าย</li>
+        <li>border-end : เส้นขวา</li>
+    </ul>
+    <div style="color: red;">หัวข้อที่ 8 - Button</div>
+    <div><b><u>Ex.</u></b>class = btn btn-[color , link , ]</div>
+    <ul>
+        <li>กำหนดสีปุ่ม</li>
+        <li>ปุ่มแบบ link : class = btn btn-link</li>
+        <li>Button tag</li>
+        <li>Outline Tag (กำหนดสีให้กับเส้น) : class = btn btn-outline-[color]</li>
+        <li>ขนาดของปุ่ม : class = btn btn-(lg,sm)</li>
+        <li>Block Botton button อยู่ภายใต้ div แล้วใส่ class ใน div class = d-grid gap-2</li>
+        <li>Botton Group อยู่ภายใต้ div แล้วปุ่มเชื่อมต่อกัน class = btn-group</li>
+        <li>Button Vertical Group อยู่ภายใต้ div ปุ่มเชื่อมกันในแนวตั้ง class = btn-group-vertical</li>
+        <li>Dropdown Menu</li>
+        <li>Button style</li>
+    </ul>
+    <div style="color: red;">หัวข้อที่ 9 - Navbar</div>
+    <ul>
+        <li>การสร้าง navbar</li>
+        <li>navbar color</li>
+        <li>navbar toggle</li>
+        <li>navbar form</li>
+        <li>Fixed-top</li>
+        <li>Fxied-bottom</li>
+        <li>Sticky-top</li>
+        <li>Dropdown-menu</li>
+    </ul>
+    <b><u>Ex.</u></b>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="" class="navbar-brand">Brand</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbartoggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbartoggle">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary ">
+        <div class="container-fluid">
+            <a href="" class="navbar-brand">Brand</a>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="" class="nav-link">About</a></li>
+            </ul>
+            <form class="d-flex">
+                <input type="text" class="form-control me-2" placeholder="Search">
+                <input type="submit" class="btn btn-outline-dark" value="ค้นหา">
+            </form>
+
+        </div>
+    </nav>
+    <div style="color: red;">หัวข้อที่ 10 - List</div>
+    <ul>
+        <li>สร้าง list ด้วย ul</li>
+        <li>สร้าง list แบบ link</li>
+        <li>List แบบ Active</li>
+        <li>กำหนดสีให้ list </li>
+        <li>List แบบไม่มีขอบ (Flush)</li>
+    </ul>
+    <b><u>Ex.</u></b>
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item">Item 1</li>
+            <li class="list-group-item">item 2</li>
+        </ul><br>
+        <span>link</span>
+        <ul class="list-group">
+            <a href="" class="list-group-item">Item 1</a>
+            <a href="" class="list-group-item">Item 2</a>
+        </ul><br>
+        <span>color</span>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-primary">Primary</li>
+            <li class="list-group-item list-group-item-secondary">secondary</li>
+        </ul><br>
+        <span>List แบบไม่มีขอบ</span>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">item 1</li>
+            <li class="list-group-item">item 2</li>
+        </ul>
+    </div>
+    <div style="color: red;">หัวข้อที่ 11 - BreadCrumb - Badge</div>
+    <ul>
+        <li>สร้าง Breadcrumb</li>
+        <li>Breadcrumb แบบ link</li>
+        <li>Badge</li>
+    </ul>
+    <div class="container">
+        <div>การสร้าง basecrumb</div>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">item1</li>
+            <li class="breadcrumb-item">item2</li>
+            <li class="breadcrumb-item">item3</li>
+        </ol>
+        <div>แบบ link</div>
+        <ol class="breadcrumb">
+            <a href="" class="breadcrumb-item">item 1</a>
+            <a href="" class="breadcrumb-item">item 2</a>
+            <a href="" class="breadcrumb-item">item 3</a>
+        </ol>
+        <div>Badge</div>
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between">item 1 <span class="badge bg-primary">5</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">item 2 <span class="badge bg-secondary">10</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">item 3 <span class="badge bg-warning">15</span>
+            </li>
+        </ul>
+    </div>
+    <div style="color: red;">หัวข้อที่ 12 - Alert</div>
+    <ul>
+        <li>การสร้าง alert</li>
+        <li>กำหนดสี alert</li>
+        <li>link alert</li>
+        <li>การปิด alert</li>
+    </ul>
+
+    <div class="container">
+        <div class="alert alert-primary alert-dismissible">
+            <button class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Simple alert</strong>
+        </div>
+    </div>
+    <div style="color: red;">หัวข้อที่ 13 - Progressbar</div>
+    <ul>
+        <li>การสร้าง progressbar</li>
+        <li>การสร้าง Progressbar แบบ Text</li>
+        <li>กำหนดสี Progressbar</li>
+        <li>กำหนดความสูง Progressbar</li>
+        <li>กำหนดลาย Progressbar</li>
+        <li>กำหนดสี Progressbar (หลายสี)</li>
+    </ul>
+    <b><u>Ex.</u></b>
+    <div class="container">
+        <div class="progress" style="height: 30px;">
+            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 75%;">75%
+            </div>
+        </div>
+        <br>
+        <div class="progress" style="height: 30px;">
+            <div class="progress-bar bg-primary progress-bar-striped " style="width: 25%;"></div>
+            <div class="progress-bar bg-secondary progress-bar-striped" style="width: 25%;"></div>
+            <div class="progress-bar bg-warning progress-bar-striped" style="width: 25%;"></div>
+            <div class="progress-bar bg-danger progress-bar-striped" style="width: 25%;"></div>
+        </div>
+    </div>
+    <div style="color: red;">หัวข้อที่ 14 - ตาราง (Table)</div>
+    <ul>
+        <li>การสร้างตาราง</li>
+        <li>Dark / light</li>
+        <li>กำหนดหัวตาราง / Striped</li>
+        <li>Bordered / borderless</li>
+        <li>Hover / สีของแถว</li>
+        <li>Small / responsive</li>
+    </ul>
+    <b><u>Ex.</u></b>
+    <div class="container">
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="table-warning">
+                <tr>
+                    <th>name</th>
+                    <th>Tel</th>
+                    <th>address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>gunn</td>
+                    <td>1111111</td>
+                    <td>bangkok</td>
+                </tr>
+                <tr>
+                    <td>Namee</td>
+                    <td>222222</td>
+                    <td>CNX</td>
+                </tr>
+                <tr>
+                    <td>Surrrname</td>
+                    <td>33333</td>
+                    <td>KBV</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="color: red;">หัวข้อที่ 15 - หมายเลขหน้า</div>
+    <ul>
+        <li>การสร้างหมายเลขหน้า</li>
+        <li>กำหนดตำแหน่ง (Alignment)</li>
+        <li>Active / Disable</li>
+        <li>กำหนดขนาด</li>
+        <li>หมายเลขหน้าแบบลูกศร (Arrow)</li>
+    </ul>
+    <br>
+    <b><u>Ex.</u></b>
+    <div class="container">
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a href="" class="page-link"><span>&laquo;</span></a></li>
+            <li class="page-item disabled"><a href="" class="page-link">before</a></li>
+            <li class="page-item"><a href="" class="page-link">1</a></li>
+            <li class="page-item active"><a href="" class="page-link">2</a></li>
+            <li class="page-item"><a href="" class="page-link">3</a></li>
+            <li class="page-item"><a href="" class="page-link">next</a></li>
+            <li class="page-item"><a href="" class="page-link"><span>&raquo;</span></a></li>
+        </ul>
+    </div>
+    <div style="color: red;">หัวข้อที่ 16 - ตกแต่งแบบฟอร์ม</div>
+    <ul>
+        <li>Form control</li>
+        <li>Form Check</li>
+        <li>Form Validation</li>
+    </ul>
+    <b><u>Ex.</u></b>
+    <form>
+        <!-- Text Field -->
+        <div class="mb-3">
+            <label for="name" class="form-label">ชื่อ</label>
+            <input type="text" placeholder="กรุณาป้อนชื่อ" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">อีเมล</label>
+            <input type="email" placeholder="กรุณาป้อนอีเมล" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">รหัสผ่าน</label>
+            <input type="password" placeholder="กรุณาป้อนรหัสผ่าน" class="form-control">
+        </div>
+        <!-- Select -->
+        <div class="mb-3">
+            <label for="job" class="form-label">อาชีพ</label>
+            <select name="job" class="form-select">
+                <option>Programmer</option>
+                <option>Developer</option>
+                <option>อาจารย์</option>
+                <option>ทนายความ</option>
+            </select>
+        </div>
+        <!-- TextArea -->
+        <div class="mb-3">
+            <label class="form-label">ที่อยู่</label>
+            <textarea class="form-control" cols="30" rows="5"></textarea>
+        </div>
+        <!-- File -->
+        <div class="mb-3">
+            <label class="form-label">เอกสาร</label>
+            <input type="file" class="form-control">
+        </div>
+        <!-- Range -->
+        <div class="mb-3">
+            <label class="form-label">ประสบการณ์ทำงาน</label>
+            <input type="range" min="1" max="5" value="5" class="form-range">
+        </div>
+        <input type="submit" name="" id="" value="บันทึกข้อมูล" class="btn btn-success">
+    </form>
+    <br>
+    <!-- Form Check -->
+    <form class="mb-3">
+        <div>
+            <label class="form-label">ชื่อ</label>
+            <input type="text" placeholder="กรุณาป้อนชื่อ" class="form-control">
+        </div>
+        <div>
+            <label class="form-label">รหัสผ่าน</label>
+            <input type="password" placeholder="กรุณาป้อนรหัสผ่าน" class="form-control">
+        </div>
+        <div class="form-check">
+            <label>
+                <input type="checkbox" name="" class="form-check-input">ฉันยอมรับเงื่อนไข
+            </label>
+        </div>
+        <button class="btn btn-danger">ส่งข้อมูล</button>
+    </form>
+    <br>
+    <!-- Validation -->
+    <div class="mb-3">
+        <label for="name" class="form-label">ชื่อ</label>
+        <input type="text" placeholder="กรุณาป้อนชื่อ" class="form-control is-valid">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">อีเมล</label>
+        <input type="email" placeholder="กรุณาป้อนอีเมล" class="form-control is-invalid">
+    </div>
+    <div class="mb-3">
+        <label for="password" class="form-label">รหัสผ่าน</label>
+        <input type="password" placeholder="กรุณาป้อนรหัสผ่าน" class="form-control is-invalid">
+        <div class="invalid-feedback">ป้อนรหัสผ่านไม่ถูกต้อง</div>
+    </div>
+    </div>
 </body>
 
 </html>
